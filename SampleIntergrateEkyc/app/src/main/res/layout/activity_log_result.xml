@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent">
+
+   <LinearLayout
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:orientation="horizontal"
+      android:background="@color/colorEKYCBackgroundButton"
+      android:paddingHorizontal="8dp"
+      android:layout_height="?attr/actionBarSize">
+
+      <TextView
+         android:id="@+id/copied_all"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_vertical"
+         android:padding="6dp"
+         android:textColor="@color/white"
+         android:textSize="16sp"
+         android:text="Copy All" />
+
+      <TextView
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:layout_height="wrap_content"
+         android:text="Hiển thị kết quả"
+         android:gravity="center"
+         android:textSize="16sp"
+         android:textColor="@color/white"
+         android:layout_gravity="center"
+         android:id="@+id/toolbar_title" />
+
+      <TextView
+         android:id="@+id/close"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_vertical"
+         android:padding="6dp"
+         android:textColor="@color/white"
+         android:textSize="16sp"
+         android:text="Đóng" />
+
+   </LinearLayout>
+
+   <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/toolbar"
+      android:fillViewport="true">
+
+      <LinearLayout
+         android:id="@+id/content"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:layout_marginTop="8dp">
+
+         <com.vnpt.ic.sample.intergrate.ekyc.LogResultView
+            android:id="@+id/log_ocr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:logTitle="OCR" />
+
+         <com.vnpt.ic.sample.intergrate.ekyc.LogResultView
+            android:id="@+id/log_liveness_card_front"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:logTitle="Liveness Card Front" />
+
+         <com.vnpt.ic.sample.intergrate.ekyc.LogResultView
+            android:id="@+id/log_liveness_card_rear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:logTitle="Liveness Card Rear" />
+
+         <com.vnpt.ic.sample.intergrate.ekyc.LogResultView
+            android:id="@+id/log_compare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:logTitle="Compare" />
+
+         <com.vnpt.ic.sample.intergrate.ekyc.LogResultView
+            android:id="@+id/log_liveness_face"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:logTitle="Liveness Face" />
+
+         <com.vnpt.ic.sample.intergrate.ekyc.LogResultView
+            android:id="@+id/log_mask_face"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:logTitle="Mask Face" />
+
+      </LinearLayout>
+
+   </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
