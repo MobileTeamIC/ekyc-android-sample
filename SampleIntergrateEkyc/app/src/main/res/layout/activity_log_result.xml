@@ -8,7 +8,7 @@
       android:id="@+id/toolbar"
       android:layout_width="match_parent"
       android:orientation="horizontal"
-      android:background="@color/colorEKYCBackgroundButton"
+      android:background="@color/colorEKYCNavigationBar"
       android:paddingHorizontal="8dp"
       android:layout_height="?attr/actionBarSize">
 
@@ -18,7 +18,7 @@
          android:layout_height="wrap_content"
          android:layout_gravity="center_vertical"
          android:padding="6dp"
-         android:textColor="@color/white"
+         android:textColor="@color/color_primary"
          android:textSize="16sp"
          android:text="Copy All" />
 

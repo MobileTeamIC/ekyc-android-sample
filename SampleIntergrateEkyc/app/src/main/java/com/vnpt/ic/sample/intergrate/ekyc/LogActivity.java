@@ -1,11 +1,11 @@
 package com.vnpt.ic.sample.intergrate.ekyc;
 
-import static com.vnptit.idg.sdk.utils.KeyResultConstants.COMPARE_RESULT;
-import static com.vnptit.idg.sdk.utils.KeyResultConstants.INFO_RESULT;
+import static com.vnptit.idg.sdk.utils.KeyResultConstants.COMPARE_FACE_RESULT;
+import static com.vnptit.idg.sdk.utils.KeyResultConstants.LIVENESS_CARD_BACK_RESULT;
 import static com.vnptit.idg.sdk.utils.KeyResultConstants.LIVENESS_CARD_FRONT_RESULT;
-import static com.vnptit.idg.sdk.utils.KeyResultConstants.LIVENESS_CARD_REAR_RESULT;
 import static com.vnptit.idg.sdk.utils.KeyResultConstants.LIVENESS_FACE_RESULT;
 import static com.vnptit.idg.sdk.utils.KeyResultConstants.MASKED_FACE_RESULT;
+import static com.vnptit.idg.sdk.utils.KeyResultConstants.OCR_RESULT;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,20 +32,20 @@ public class LogActivity extends AppCompatActivity {
 
       final Intent intent = getIntent();
 
-      setLogResultSafe(binding.logOcr, intent.getStringExtra(INFO_RESULT));
+      setLogResultSafe(binding.logOcr, intent.getStringExtra(OCR_RESULT));
       setLogResultSafe(binding.logLivenessCardFront, intent.getStringExtra(LIVENESS_CARD_FRONT_RESULT));
-      setLogResultSafe(binding.logLivenessCardRear, intent.getStringExtra(LIVENESS_CARD_REAR_RESULT));
-      setLogResultSafe(binding.logCompare, intent.getStringExtra(COMPARE_RESULT));
+      setLogResultSafe(binding.logLivenessCardRear, intent.getStringExtra(LIVENESS_CARD_BACK_RESULT));
+      setLogResultSafe(binding.logCompare, intent.getStringExtra(COMPARE_FACE_RESULT));
       setLogResultSafe(binding.logLivenessFace, intent.getStringExtra(LIVENESS_FACE_RESULT));
       setLogResultSafe(binding.logMaskFace, intent.getStringExtra(MASKED_FACE_RESULT));
 
       binding.close.setOnClickListener(v -> finish());
 
       binding.copiedAll.setOnClickListener(v -> {
-         copy(intent.getStringExtra(INFO_RESULT));
+         copy(intent.getStringExtra(OCR_RESULT));
          copy(intent.getStringExtra(LIVENESS_CARD_FRONT_RESULT));
-         copy(intent.getStringExtra(LIVENESS_CARD_REAR_RESULT));
-         copy(intent.getStringExtra(COMPARE_RESULT));
+         copy(intent.getStringExtra(LIVENESS_CARD_BACK_RESULT));
+         copy(intent.getStringExtra(COMPARE_FACE_RESULT));
          copy(intent.getStringExtra(LIVENESS_FACE_RESULT));
          copy(intent.getStringExtra(MASKED_FACE_RESULT));
       });
