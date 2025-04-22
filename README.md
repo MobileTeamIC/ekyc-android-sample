@@ -1,7 +1,7 @@
 # ekyc-android-sample
 Dự án mẫu thực hiện việc tích hợp SDK VNPT eKYC cho ứng dụng di động (Android)
 
-
+## Hướng dẫn cài đặt
 ## Quan trọng: Liên hệ với chúng tôi qua trang web: [https://ekyc.vnpt.vn/vi]() hoặc email **vnptai@vnpt.vn** để có thể lấy được các token và sdk, nếu không app sẽ không chạy được 
 
 ## Hướng dẫn cài đặt
@@ -30,7 +30,8 @@ git clone ...
 - Khách hàng sẽ đăng nhập bằng tài khoản trên landing page
 - Truy cập vào mục "Quản lý Token" ở cột bên trái và lấy các giá trị token
 - Để ý hộp nhỏ ở góc trên bên phải màn hình để chọn đúng dịch vụ 
-- Thay token vào các giá trị tương ứng trong class SampleActivity
+- Thay token vào các giá trị tương ứng trong class SampleActivity 
+- **Chú ý**: Mỗi chức năng sẽ đều cần người dùng tự truyền token, nên người dùng cần truyền token vào mọi hàm gọi chức năng trong SampleActivity
 - **Chú ý**: AccessToken sẽ sử dụng API để refresh định kì
 
 ### Bước 6: Chạy ứng dụng

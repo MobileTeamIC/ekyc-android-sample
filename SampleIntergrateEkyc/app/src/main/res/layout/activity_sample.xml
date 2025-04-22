@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
    android:layout_width="match_parent"
    android:layout_height="match_parent"
    android:orientation="vertical">
@@ -20,6 +21,7 @@
       android:layout_marginHorizontal="16dp"
       android:text="eKYC luồng đầy đủ"
       android:textAppearance="?attr/textAppearanceSubtitle2"
+      android:visibility="gone"
       android:layout_marginVertical="2dp" />
 
    <com.google.android.material.button.MaterialButton
@@ -41,5 +43,25 @@
       android:text="Thực hiện kiểm tra khuôn mặt"
       android:textAppearance="?attr/textAppearanceSubtitle2"
       android:layout_marginVertical="2dp" />
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/nfc_qr"
+       style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginHorizontal="16dp"
+       android:text="Thực hiện quét QR - NFC"
+       android:textAppearance="?attr/textAppearanceSubtitle2"
+       android:layout_marginVertical="2dp" />
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/nfc"
+       style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginHorizontal="16dp"
+       android:text="Thực hiện nhập thông tin - quét NFC"
+       android:textAppearance="?attr/textAppearanceSubtitle2"
+       android:layout_marginVertical="2dp" />
 
 </LinearLayout>

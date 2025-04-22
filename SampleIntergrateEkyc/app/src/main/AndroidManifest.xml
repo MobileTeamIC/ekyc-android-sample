@@ -34,6 +34,7 @@
       </activity>
 
       <activity android:name=".LogActivity" />
+       <activity android:name="com.vnpt.ic.sample.intergrate.ekyc.LogResultActivity" />
 
    </application>
 

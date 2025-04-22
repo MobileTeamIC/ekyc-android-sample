@@ -16,3 +16,4 @@ rootProject.name = "SampleIntergrateEkyc"
 include ':ekyc'
 include ':app'
 include ':scanqr'
+include ':nfc'
