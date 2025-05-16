@@ -94,6 +94,12 @@
             android:layout_height="wrap_content"
             app:logTitle="Mask Face" />
 
+         <com.vnpt.ic.sample.intergrate.ekyc.LogResultView
+            android:id="@+id/log_qr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:logTitle="QR Code result" />
+
       </LinearLayout>
 
    </androidx.core.widget.NestedScrollView>

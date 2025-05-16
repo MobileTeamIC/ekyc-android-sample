@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+/.idea
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
@@ -13,6 +14,11 @@
 .externalNativeBuild
 .cxx
 local.properties
-scanqr
-ekyc
+nfc/vnpt_nfc_sdk-release-*.aar
+scanqr/scanqr_ic_sdk-release-*.aar
+ekyc/ekyc_sdk-release-*.aar
+app/build
+nfc/build
+scanqr/build
+ekyc/build
 
